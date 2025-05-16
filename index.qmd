@@ -1,11 +1,19 @@
 ---
-title: "template"
+title: "Home Page"
 ---
 
-This is a Quarto website.
+#メッシとクリロナのクラブゴールデータ分析の研究
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+#研究目的
 
-```{r}
-1 + 2
-```
+●●
+
+##研究期間
+
+2025年4月1日~2025年7月15日
+
+##研究内容
+
+●●
+
+##
