@@ -11,7 +11,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "ロカケンゾー"
   },
   {
     "objectID": "index.html#研究期間",
@@ -26,5 +26,12 @@
     "title": "Home Page",
     "section": "研究内容",
     "text": "研究内容\n●●"
+  },
+  {
+    "objectID": "about.html#学歴",
+    "href": "about.html#学歴",
+    "title": "About",
+    "section": "学歴",
+    "text": "学歴\n\n浜松聖星高校卒業\n東京国際大学在学"
   }
 ]
