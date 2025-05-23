@@ -17,3 +17,19 @@ title: "Home Page"
 ●●
 
 ## 
+
+## データ
+
+# メッシのクラブゴールデータ
+
+```{r}
+d1 <- read.csv("./data/messi_data.csv")
+head(d1,10)
+```
+
+# ロナウドのクラブゴールデータ
+
+```{r}
+d2 <- read.csv("./data/cr7_data.csv")
+head(d2,10)
+```
