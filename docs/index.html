@@ -156,10 +156,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#研究期間" id="toc-研究期間" class="nav-link" data-scroll-target="#研究期間">研究期間</a></li>
   <li><a href="#研究内容" id="toc-研究内容" class="nav-link" data-scroll-target="#研究内容">研究内容</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
-  <li><a href="#データ" id="toc-データ" class="nav-link" data-scroll-target="#データ">データ</a></li>
-  </ul></li>
+  <li><a href="#データ" id="toc-データ" class="nav-link" data-scroll-target="#データ">データ</a>
+  <ul class="collapse">
   <li><a href="#メッシのクラブゴールデータ" id="toc-メッシのクラブゴールデータ" class="nav-link" data-scroll-target="#メッシのクラブゴールデータ">メッシのクラブゴールデータ</a></li>
   <li><a href="#ロナウドのクラブゴールデータ" id="toc-ロナウドのクラブゴールデータ" class="nav-link" data-scroll-target="#ロナウドのクラブゴールデータ">ロナウドのクラブゴールデータ</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -202,35 +204,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="データ" class="level2">
 <h2 class="anchored" data-anchor-id="データ">データ</h2>
-</section>
-</section>
-<section id="メッシのクラブゴールデータ" class="level1">
-<h1>メッシのクラブゴールデータ</h1>
+<section id="メッシのクラブゴールデータ" class="level3">
+<h3 class="anchored" data-anchor-id="メッシのクラブゴールデータ">メッシのクラブゴールデータ</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>d1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./data/messi_data.csv"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(<span class="fu">head</span>(d1,<span class="dv">5</span>),<span class="at">options =</span> <span class="fu">list</span>(<span class="at">autoWidth =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div class="datatables html-widget html-fill-item" id="htmlwidget-bdab527499dfb53320dc" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-bdab527499dfb53320dc">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5"],["04/05","05/06","05/06","05/06","05/06"],["LaLiga","UEFA Champions League","LaLiga","LaLiga","LaLiga"],["34","Group Stage","13","19","20"],["05-01/05","11-02/05","11/27/05","1/15/06","1/22/06"],["H","H","H","H","H"],["FC Barcelona","FC Barcelona","FC Barcelona","FC Barcelona","FC Barcelona"],["Albacete Balompie","Panathinaikos Athens","Racing Santander","Athletic Bilbao","Deportivo Alaves"],["2:00","5:00","4:01","2:01","2:00"],["CF","RW","RW","RW","CF"],["90+1","34","51","50","82"],["2:00","3:00","2:00","2:01","2:00"],["Left-footed shot","Left-footed shot","Left-footed shot","Left-footed shot","Left-footed shot"],["Ronaldinho Gaacho","","Samuel Etoo","Mark van Bommel","Ronaldinho Gaacho"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Season<\/th>\n      <th>Competition<\/th>\n      <th>Matchday<\/th>\n      <th>Date<\/th>\n      <th>Venue<\/th>\n      <th>Club<\/th>\n      <th>Opponent<\/th>\n      <th>Result<\/th>\n      <th>Playing_Position<\/th>\n      <th>Minute<\/th>\n      <th>At_score<\/th>\n      <th>Type<\/th>\n      <th>Goal_assist<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Season","targets":1},{"name":"Competition","targets":2},{"name":"Matchday","targets":3},{"name":"Date","targets":4},{"name":"Venue","targets":5},{"name":"Club","targets":6},{"name":"Opponent","targets":7},{"name":"Result","targets":8},{"name":"Playing_Position","targets":9},{"name":"Minute","targets":10},{"name":"At_score","targets":11},{"name":"Type","targets":12},{"name":"Goal_assist","targets":13}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-c6cd2904f0d803c49782" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c6cd2904f0d803c49782">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5"],["04/05","05/06","05/06","05/06","05/06"],["LaLiga","UEFA Champions League","LaLiga","LaLiga","LaLiga"],["34","Group Stage","13","19","20"],["05-01/05","11-02/05","11/27/05","1/15/06","1/22/06"],["H","H","H","H","H"],["FC Barcelona","FC Barcelona","FC Barcelona","FC Barcelona","FC Barcelona"],["Albacete Balompie","Panathinaikos Athens","Racing Santander","Athletic Bilbao","Deportivo Alaves"],["2:00","5:00","4:01","2:01","2:00"],["CF","RW","RW","RW","CF"],["90+1","34","51","50","82"],["2:00","3:00","2:00","2:01","2:00"],["Left-footed shot","Left-footed shot","Left-footed shot","Left-footed shot","Left-footed shot"],["Ronaldinho Gaacho","","Samuel Etoo","Mark van Bommel","Ronaldinho Gaacho"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Season<\/th>\n      <th>Competition<\/th>\n      <th>Matchday<\/th>\n      <th>Date<\/th>\n      <th>Venue<\/th>\n      <th>Club<\/th>\n      <th>Opponent<\/th>\n      <th>Result<\/th>\n      <th>Playing_Position<\/th>\n      <th>Minute<\/th>\n      <th>At_score<\/th>\n      <th>Type<\/th>\n      <th>Goal_assist<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Season","targets":1},{"name":"Competition","targets":2},{"name":"Matchday","targets":3},{"name":"Date","targets":4},{"name":"Venue","targets":5},{"name":"Club","targets":6},{"name":"Opponent","targets":7},{"name":"Result","targets":8},{"name":"Playing_Position","targets":9},{"name":"Minute","targets":10},{"name":"At_score","targets":11},{"name":"Type","targets":12},{"name":"Goal_assist","targets":13}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
-<section id="ロナウドのクラブゴールデータ" class="level1">
-<h1>ロナウドのクラブゴールデータ</h1>
+<section id="ロナウドのクラブゴールデータ" class="level3">
+<h3 class="anchored" data-anchor-id="ロナウドのクラブゴールデータ">ロナウドのクラブゴールデータ</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>d2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./data/cr7_data.csv"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(<span class="fu">head</span>(d2,<span class="dv">5</span>),<span class="at">options =</span> <span class="fu">list</span>(<span class="at">autoWidth =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div class="datatables html-widget html-fill-item" id="htmlwidget-a14543ee7679011fb78f" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-a14543ee7679011fb78f">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5"],["02/03","02/03","02/03","02/03","02/03"],["Liga Portugal","Liga Portugal","Liga Portugal","Taca de Portugal Placard","Taca de Portugal Placard"],["6","6","8","Fourth Round","Fifth Round"],["10-07-02","10-07-02","10/26/02","11/24/02","12/18/02"],["H","H","A","H","H"],["Sporting CP","Sporting CP","Sporting CP","Sporting CP","Sporting CP"],["Moreirense FC","Moreirense FC","Boavista FC","CD Estarreja","FC Oliveira do Hospital"],["3:00","3:00","1:02","4:01","8:01"],["LW","LW","","",""],["34","90+5","88","67","13"],["2:00","3:00","1:02","3:00","3:00"],["Solo run","Header","Right-footed shot","Left-footed shot",""],["","Rui Jorge","Carlos Martins","Cesar Prates",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Season<\/th>\n      <th>Competition<\/th>\n      <th>Matchday<\/th>\n      <th>Date<\/th>\n      <th>Venue<\/th>\n      <th>Club<\/th>\n      <th>Opponent<\/th>\n      <th>Result<\/th>\n      <th>Playing_Position<\/th>\n      <th>Minute<\/th>\n      <th>At_score<\/th>\n      <th>Type<\/th>\n      <th>Goal_assist<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Season","targets":1},{"name":"Competition","targets":2},{"name":"Matchday","targets":3},{"name":"Date","targets":4},{"name":"Venue","targets":5},{"name":"Club","targets":6},{"name":"Opponent","targets":7},{"name":"Result","targets":8},{"name":"Playing_Position","targets":9},{"name":"Minute","targets":10},{"name":"At_score","targets":11},{"name":"Type","targets":12},{"name":"Goal_assist","targets":13}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-91d0aa8c9c6da2bf231d" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-91d0aa8c9c6da2bf231d">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5"],["02/03","02/03","02/03","02/03","02/03"],["Liga Portugal","Liga Portugal","Liga Portugal","Taca de Portugal Placard","Taca de Portugal Placard"],["6","6","8","Fourth Round","Fifth Round"],["10-07-02","10-07-02","10/26/02","11/24/02","12/18/02"],["H","H","A","H","H"],["Sporting CP","Sporting CP","Sporting CP","Sporting CP","Sporting CP"],["Moreirense FC","Moreirense FC","Boavista FC","CD Estarreja","FC Oliveira do Hospital"],["3:00","3:00","1:02","4:01","8:01"],["LW","LW","","",""],["34","90+5","88","67","13"],["2:00","3:00","1:02","3:00","3:00"],["Solo run","Header","Right-footed shot","Left-footed shot",""],["","Rui Jorge","Carlos Martins","Cesar Prates",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Season<\/th>\n      <th>Competition<\/th>\n      <th>Matchday<\/th>\n      <th>Date<\/th>\n      <th>Venue<\/th>\n      <th>Club<\/th>\n      <th>Opponent<\/th>\n      <th>Result<\/th>\n      <th>Playing_Position<\/th>\n      <th>Minute<\/th>\n      <th>At_score<\/th>\n      <th>Type<\/th>\n      <th>Goal_assist<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Season","targets":1},{"name":"Competition","targets":2},{"name":"Matchday","targets":3},{"name":"Date","targets":4},{"name":"Venue","targets":5},{"name":"Club","targets":6},{"name":"Opponent","targets":7},{"name":"Result","targets":8},{"name":"Playing_Position","targets":9},{"name":"Minute","targets":10},{"name":"At_score","targets":11},{"name":"Type","targets":12},{"name":"Goal_assist","targets":13}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

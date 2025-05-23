@@ -20,7 +20,7 @@ title: "Home Page"
 
 ## データ
 
-# メッシのクラブゴールデータ
+### メッシのクラブゴールデータ
 
 ```{r}
 library(DT)
@@ -28,7 +28,7 @@ d1 <- read.csv("./data/messi_data.csv")
 datatable(head(d1,5),options = list(autoWidth = TRUE))
 ```
 
-# ロナウドのクラブゴールデータ
+### ロナウドのクラブゴールデータ
 
 ```{r} 
 library(DT)

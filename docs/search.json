@@ -39,6 +39,6 @@
     "href": "index.html#データ",
     "title": "Home Page",
     "section": "データ",
-    "text": "データ"
+    "text": "データ\n\nメッシのクラブゴールデータ\n\nlibrary(DT)\nd1 &lt;- read.csv(\"./data/messi_data.csv\")\ndatatable(head(d1,5),options = list(autoWidth = TRUE))\n\n\n\n\n\n\n\n\nロナウドのクラブゴールデータ\n\nlibrary(DT)\nd2 &lt;- read.csv(\"./data/cr7_data.csv\")\ndatatable(head(d2,5),options = list(autoWidth = TRUE))"
   }
 ]
