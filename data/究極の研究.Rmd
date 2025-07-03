@@ -1,0 +1,67 @@
+```{r}
+df <- read.csv("C:/Users/Kenny815/01_TIU/01_DS/03_junior_seminer/dsbiztiu23110048.github.io/data/data.csv")
+df
+
+# ライブラリ読み込み（明示的に dplyr を参照）
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(gridExtra)
+```
+
+```{r}
+# 必要パッケージ
+library(ggplot2)
+library(dplyr)
+library(readr)
+
+# データ読み込み
+data <- read_csv("data.csv")
+
+# 列名確認（例: "Player", "Minute" など）
+colnames(data)
+
+# 数値に変換
+data <- data %>%
+  mutate(
+    Minute = as.numeric(Minute),
+    Player = as.factor(Player)
+  )
+
+# 使用するプレイヤー名を指定（実際の名前に合わせてください）
+selected_players <- c("Lionel Messi", "Cristiano Ronaldo")
+
+# プレイヤーをフィルター
+filtered_data <- data %>% filter(Player %in% selected_players)
+
+# ヒストグラム作成
+ggplot(filtered_data, aes(x = Minute, fill = Player)) +
+  geom_histogram(binwidth = 5, color = "black", alpha = 0.7) +
+  facet_wrap(~ Player, ncol = 1) +
+  labs(
+    title = "Player別 ゴール時間ヒストグラム",
+    x = "ゴール時間（分）",
+    y = "ゴール数"
+  ) +
+  theme_minimal()
+
+```
+```{r}
+# 必要なパッケージをインストール・読み込み
+#install.packages("rpart")
+#install.packages("rpart.plot")
+library(rpart)
+library(rpart.plot)
+
+# データの読み込み
+data <- read.csv("c:/Users/Kenny815/01_TIU/01_DS/03_junior_seminer/dsbiztiu23110048.github.io/data/data.csv", stringsAsFactors = TRUE)
+
+# 欠損値を含む行をすべて除去
+data_no_na <- na.omit(data)
+
+tree <- rpart(Player ~ Season, data = data, method = "class")
+
+# 可視化
+rpart.plot(tree)
+```
+

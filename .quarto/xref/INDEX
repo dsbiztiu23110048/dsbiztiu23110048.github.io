@@ -4,5 +4,11 @@
   },
   "about.qmd": {
     "about.html": "b5bf15a7"
+  },
+  "data/研究.Rmd": {
+    "研究.html": "949ca776"
+  },
+  "data/究極の研究.Rmd": {
+    "究極の研究.html": "16fe634f"
   }
 }

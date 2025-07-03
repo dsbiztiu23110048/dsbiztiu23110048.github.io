@@ -150,17 +150,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#メッシとクリロナのクラブゴールデータ分析の研究" id="toc-メッシとクリロナのクラブゴールデータ分析の研究" class="nav-link active" data-scroll-target="#メッシとクリロナのクラブゴールデータ分析の研究">メッシとクリロナのクラブゴールデータ分析の研究</a></li>
-  <li><a href="#研究目的" id="toc-研究目的" class="nav-link" data-scroll-target="#研究目的">研究目的</a>
+  <li><a href="#メッシとクリロナのクラブゴールデータ分析の研究" id="toc-メッシとクリロナのクラブゴールデータ分析の研究" class="nav-link active" data-scroll-target="#メッシとクリロナのクラブゴールデータ分析の研究">メッシとクリロナのクラブゴールデータ分析の研究</a>
   <ul class="collapse">
+  <li><a href="#研究目的" id="toc-研究目的" class="nav-link" data-scroll-target="#研究目的">研究目的</a></li>
   <li><a href="#研究期間" id="toc-研究期間" class="nav-link" data-scroll-target="#研究期間">研究期間</a></li>
   <li><a href="#研究内容" id="toc-研究内容" class="nav-link" data-scroll-target="#研究内容">研究内容</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   <li><a href="#データ" id="toc-データ" class="nav-link" data-scroll-target="#データ">データ</a>
   <ul class="collapse">
-  <li><a href="#メッシのクラブゴールデータ" id="toc-メッシのクラブゴールデータ" class="nav-link" data-scroll-target="#メッシのクラブゴールデータ">メッシのクラブゴールデータ</a></li>
-  <li><a href="#ロナウドのクラブゴールデータ" id="toc-ロナウドのクラブゴールデータ" class="nav-link" data-scroll-target="#ロナウドのクラブゴールデータ">ロナウドのクラブゴールデータ</a></li>
+  <li><a href="#メッシとロナウドのクラブゴールデータ" id="toc-メッシとロナウドのクラブゴールデータ" class="nav-link" data-scroll-target="#メッシとロナウドのクラブゴールデータ">メッシとロナウドのクラブゴールデータ</a></li>
   </ul></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#ライブラリの読み込み" id="toc-ライブラリの読み込み" class="nav-link" data-scroll-target="#ライブラリの読み込み">ライブラリの読み込み</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
+  <li><a href="#ゴール時間分のヒストグラム" id="toc-ゴール時間分のヒストグラム" class="nav-link" data-scroll-target="#ゴール時間分のヒストグラム">ゴール時間(分)のヒストグラム</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"></a></li>
+  <li><a href="#決定木" id="toc-決定木" class="nav-link" data-scroll-target="#決定木">決定木</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"></a></li>
+  <li><a href="#対戦相手とプレイポジションの主成分分析" id="toc-対戦相手とプレイポジションの主成分分析" class="nav-link" data-scroll-target="#対戦相手とプレイポジションの主成分分析">対戦相手とプレイポジションの主成分分析</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5"></a></li>
+  <li><a href="#アシスト選手とプレイポジションの主成分分析" id="toc-アシスト選手とプレイポジションの主成分分析" class="nav-link" data-scroll-target="#アシスト選手とプレイポジションの主成分分析">アシスト選手とプレイポジションの主成分分析</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6"></a></li>
+  <li><a href="#ホームアウェイのゴール確率ロジスティック回帰" id="toc-ホームアウェイのゴール確率ロジスティック回帰" class="nav-link" data-scroll-target="#ホームアウェイのゴール確率ロジスティック回帰">ホーム・アウェイのゴール確率（ロジスティック回帰</a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7"></a></li>
+  <li><a href="#年毎のゴール数の時系列分析" id="toc-年毎のゴール数の時系列分析" class="nav-link" data-scroll-target="#年毎のゴール数の時系列分析">年毎のゴール数の時系列分析</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -187,51 +200,269 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="メッシとクリロナのクラブゴールデータ分析の研究" class="level1">
 <h1>メッシとクリロナのクラブゴールデータ分析の研究</h1>
+<section id="研究目的" class="level2">
+<h2 class="anchored" data-anchor-id="研究目的">研究目的</h2>
+<p>メッシとロナウドのゴールを決めやすい時間、誰からのアシストが多いか、どういう決め方が多いかなどのデータから2人の得意なプレーや敵チームとの相性や特徴を調べること</p>
 </section>
-<section id="研究目的" class="level1">
-<h1>研究目的</h1>
-<p>●●</p>
 <section id="研究期間" class="level2">
 <h2 class="anchored" data-anchor-id="研究期間">研究期間</h2>
-<p>2025年4月1日~2025年7月15日</p>
+<p>2025年4月1日~2025年7月4日</p>
 </section>
 <section id="研究内容" class="level2">
 <h2 class="anchored" data-anchor-id="研究内容">研究内容</h2>
-<p>●●</p>
+<ul>
+<li><p>ゴールを決めた時間のヒストグラムと回帰分析</p></li>
+<li><p>データ全体の決定木</p></li>
+<li><p>アシストした人との主成分分析</p></li>
+<li><p>ホームとアウェイの時のゴールのロジスティック回帰分析</p></li>
+<li><p>年毎のゴールの時系列分析</p></li>
+</ul>
 </section>
 <section id="section" class="level2">
 <h2 class="anchored" data-anchor-id="section"></h2>
 </section>
 <section id="データ" class="level2">
 <h2 class="anchored" data-anchor-id="データ">データ</h2>
-<section id="メッシのクラブゴールデータ" class="level3">
-<h3 class="anchored" data-anchor-id="メッシのクラブゴールデータ">メッシのクラブゴールデータ</h3>
+<section id="メッシとロナウドのクラブゴールデータ" class="level3">
+<h3 class="anchored" data-anchor-id="メッシとロナウドのクラブゴールデータ">メッシとロナウドのクラブゴールデータ</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>d1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./data/messi_data.csv"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(<span class="fu">head</span>(d1,<span class="dv">5</span>),<span class="at">options =</span> <span class="fu">list</span>(<span class="at">autoWidth =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./data/data.csv"</span>, <span class="at">stringsAsFactors =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(<span class="fu">head</span>(data,<span class="dv">5</span>),<span class="at">options =</span> <span class="fu">list</span>(<span class="at">autoWidth =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div class="datatables html-widget html-fill-item" id="htmlwidget-c6cd2904f0d803c49782" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-c6cd2904f0d803c49782">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5"],["04/05","05/06","05/06","05/06","05/06"],["LaLiga","UEFA Champions League","LaLiga","LaLiga","LaLiga"],["34","Group Stage","13","19","20"],["05-01/05","11-02/05","11/27/05","1/15/06","1/22/06"],["H","H","H","H","H"],["FC Barcelona","FC Barcelona","FC Barcelona","FC Barcelona","FC Barcelona"],["Albacete Balompie","Panathinaikos Athens","Racing Santander","Athletic Bilbao","Deportivo Alaves"],["2:00","5:00","4:01","2:01","2:00"],["CF","RW","RW","RW","CF"],["90+1","34","51","50","82"],["2:00","3:00","2:00","2:01","2:00"],["Left-footed shot","Left-footed shot","Left-footed shot","Left-footed shot","Left-footed shot"],["Ronaldinho Gaacho","","Samuel Etoo","Mark van Bommel","Ronaldinho Gaacho"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Season<\/th>\n      <th>Competition<\/th>\n      <th>Matchday<\/th>\n      <th>Date<\/th>\n      <th>Venue<\/th>\n      <th>Club<\/th>\n      <th>Opponent<\/th>\n      <th>Result<\/th>\n      <th>Playing_Position<\/th>\n      <th>Minute<\/th>\n      <th>At_score<\/th>\n      <th>Type<\/th>\n      <th>Goal_assist<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Season","targets":1},{"name":"Competition","targets":2},{"name":"Matchday","targets":3},{"name":"Date","targets":4},{"name":"Venue","targets":5},{"name":"Club","targets":6},{"name":"Opponent","targets":7},{"name":"Result","targets":8},{"name":"Playing_Position","targets":9},{"name":"Minute","targets":10},{"name":"At_score","targets":11},{"name":"Type","targets":12},{"name":"Goal_assist","targets":13}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-58b78f90553b5b3134cc" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-58b78f90553b5b3134cc">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5"],["Cristiano Ronaldo","Cristiano Ronaldo","Cristiano Ronaldo","Cristiano Ronaldo","Cristiano Ronaldo"],["2/3","2/3","2/3","2/3","2/3"],["Liga Portugal","Liga Portugal","Liga Portugal","Taca de Portugal Placard","Taca de Portugal Placard"],["6","6","8","Fourth Round","Fifth Round"],["2002/10/7","2002/10/7","2002/10/26","2002/11/24","2002/12/18"],["H","H","A","H","H"],["Sporting CP","Sporting CP","Sporting CP","Sporting CP","Sporting CP"],["Moreirense FC","Moreirense FC","Boavista FC","CD Estarreja","FC Oliveira do Hospital"],["3:00","3:00","1:02","4:01","8:01"],["LW","LW","","",""],["34","90+5","88","67","13"],["2:00","3:00","1:02","3:00","3:00"],["Solo run","Header","Right-footed shot","Left-footed shot",""],["","Rui Jorge","Carlos Martins","Cesar Prates",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Player<\/th>\n      <th>Season<\/th>\n      <th>Competition<\/th>\n      <th>Matchday<\/th>\n      <th>Date<\/th>\n      <th>Venue<\/th>\n      <th>Club<\/th>\n      <th>Opponent<\/th>\n      <th>Result<\/th>\n      <th>Playing_Position<\/th>\n      <th>Minute<\/th>\n      <th>At_score<\/th>\n      <th>Type<\/th>\n      <th>Goal_assist<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Player","targets":1},{"name":"Season","targets":2},{"name":"Competition","targets":3},{"name":"Matchday","targets":4},{"name":"Date","targets":5},{"name":"Venue","targets":6},{"name":"Club","targets":7},{"name":"Opponent","targets":8},{"name":"Result","targets":9},{"name":"Playing_Position","targets":10},{"name":"Minute","targets":11},{"name":"At_score","targets":12},{"name":"Type","targets":13},{"name":"Goal_assist","targets":14}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
+<p><img src="fig/messi&amp;cr7.png" class="img-fluid" style="width:100.0%"></p>
 </section>
-<section id="ロナウドのクラブゴールデータ" class="level3">
-<h3 class="anchored" data-anchor-id="ロナウドのクラブゴールデータ">ロナウドのクラブゴールデータ</h3>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
+</section>
+<section id="ライブラリの読み込み" class="level2">
+<h2 class="anchored" data-anchor-id="ライブラリの読み込み">ライブラリの読み込み</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>d2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./data/cr7_data.csv"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(<span class="fu">head</span>(d2,<span class="dv">5</span>),<span class="at">options =</span> <span class="fu">list</span>(<span class="at">autoWidth =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+ 次のパッケージを付け加えます: 'dplyr' </code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code> 以下のオブジェクトは 'package:stats' からマスクされています:
 
-<div class="datatables html-widget html-fill-item" id="htmlwidget-91d0aa8c9c6da2bf231d" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-91d0aa8c9c6da2bf231d">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5"],["02/03","02/03","02/03","02/03","02/03"],["Liga Portugal","Liga Portugal","Liga Portugal","Taca de Portugal Placard","Taca de Portugal Placard"],["6","6","8","Fourth Round","Fifth Round"],["10-07-02","10-07-02","10/26/02","11/24/02","12/18/02"],["H","H","A","H","H"],["Sporting CP","Sporting CP","Sporting CP","Sporting CP","Sporting CP"],["Moreirense FC","Moreirense FC","Boavista FC","CD Estarreja","FC Oliveira do Hospital"],["3:00","3:00","1:02","4:01","8:01"],["LW","LW","","",""],["34","90+5","88","67","13"],["2:00","3:00","1:02","3:00","3:00"],["Solo run","Header","Right-footed shot","Left-footed shot",""],["","Rui Jorge","Carlos Martins","Cesar Prates",""]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Season<\/th>\n      <th>Competition<\/th>\n      <th>Matchday<\/th>\n      <th>Date<\/th>\n      <th>Venue<\/th>\n      <th>Club<\/th>\n      <th>Opponent<\/th>\n      <th>Result<\/th>\n      <th>Playing_Position<\/th>\n      <th>Minute<\/th>\n      <th>At_score<\/th>\n      <th>Type<\/th>\n      <th>Goal_assist<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"columnDefs":[{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Season","targets":1},{"name":"Competition","targets":2},{"name":"Matchday","targets":3},{"name":"Date","targets":4},{"name":"Venue","targets":5},{"name":"Club","targets":6},{"name":"Opponent","targets":7},{"name":"Result","targets":8},{"name":"Playing_Position","targets":9},{"name":"Minute","targets":10},{"name":"At_score","targets":11},{"name":"Type","targets":12},{"name":"Goal_assist","targets":13}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code> 以下のオブジェクトは 'package:base' からマスクされています:
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gridExtra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+ 次のパッケージを付け加えます: 'gridExtra' </code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code> 以下のオブジェクトは 'package:dplyr' からマスクされています:
+
+    combine</code></pre>
 </div>
 </div>
-
-
 </section>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2"></h2>
+</section>
+<section id="ゴール時間分のヒストグラム" class="level2">
+<h2 class="anchored" data-anchor-id="ゴール時間分のヒストグラム">ゴール時間(分)のヒストグラム</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 列名確認（例: "Player", "Minute" など）</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Player"           "Season"           "Competition"      "Matchday"        
+ [5] "Date"             "Venue"            "Club"             "Opponent"        
+ [9] "Result"           "Playing_Position" "Minute"           "At_score"        
+[13] "Type"             "Goal_assist"     </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 数値に変換</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">Minute =</span> <span class="fu">as.numeric</span>(Minute),</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Player =</span> <span class="fu">as.factor</span>(Player)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 使用するプレイヤー名を指定（実際の名前に合わせてください）</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>selected_players <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Lionel Messi"</span>, <span class="st">"Cristiano Ronaldo"</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co"># プレイヤーをフィルター</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>filtered_data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Player <span class="sc">%in%</span> selected_players)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co"># ヒストグラム作成</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(filtered_data, <span class="fu">aes</span>(<span class="at">x =</span> Minute, <span class="at">fill =</span> Player)) <span class="sc">+</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Player, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"メッシとロナウドのゴール時間ヒストグラム"</span>,</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"ゴール時間（分）"</span>,</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"ゴール数"</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3"></h2>
+</section>
+<section id="決定木" class="level2">
+<h2 class="anchored" data-anchor-id="決定木">決定木</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("rpart")</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("rpart.plot")</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart.plot)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 欠損値を含む行をすべて除去</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>data_no_na <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(data)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>tree <span class="ot">&lt;-</span> <span class="fu">rpart</span>(Player <span class="sc">~</span> Competition <span class="sc">+</span> Season , <span class="at">data =</span> data, <span class="at">method =</span> <span class="st">"class"</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 可視化</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="fu">rpart.plot</span>(tree)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="section-4" class="level2">
+<h2 class="anchored" data-anchor-id="section-4"></h2>
+</section>
+<section id="対戦相手とプレイポジションの主成分分析" class="level2">
+<h2 class="anchored" data-anchor-id="対戦相手とプレイポジションの主成分分析">対戦相手とプレイポジションの主成分分析</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 欠損値除去</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>data_no_na <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(data[, <span class="fu">c</span>(<span class="st">"Opponent"</span>, <span class="st">"Playing_Position"</span>)])</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ダミー変数化</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>data_dummy <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(<span class="sc">~</span> Opponent <span class="sc">+</span> Playing_Position <span class="sc">-</span> <span class="dv">1</span>, <span class="at">data =</span> data_no_na)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 主成分分析</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>pca <span class="ot">&lt;-</span> <span class="fu">prcomp</span>(data_dummy, <span class="at">scale. =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># プロット</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>autoplot <span class="ot">&lt;-</span> <span class="cf">function</span>(pca) {</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(pca<span class="sc">$</span>x)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> PC1, <span class="at">y =</span> PC2)) <span class="sc">+</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"PCA of Opponent and Playing_Position"</span>)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(pca)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="section-5" class="level2">
+<h2 class="anchored" data-anchor-id="section-5"></h2>
+</section>
+<section id="アシスト選手とプレイポジションの主成分分析" class="level2">
+<h2 class="anchored" data-anchor-id="アシスト選手とプレイポジションの主成分分析">アシスト選手とプレイポジションの主成分分析</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 欠損値除去</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>data_no_na <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(data[, <span class="fu">c</span>(<span class="st">"Goal_assist"</span>, <span class="st">"Playing_Position"</span>)])</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ダミー変数化</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>data_dummy <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(<span class="sc">~</span> Goal_assist <span class="sc">+</span> Playing_Position <span class="sc">-</span> <span class="dv">1</span>, <span class="at">data =</span> data_no_na)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 主成分分析</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>pca <span class="ot">&lt;-</span> <span class="fu">prcomp</span>(data_dummy, <span class="at">scale. =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># プロット</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>autoplot <span class="ot">&lt;-</span> <span class="cf">function</span>(pca) {</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(pca<span class="sc">$</span>x)</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> PC1, <span class="at">y =</span> PC2)) <span class="sc">+</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"PCA of Goal_assist and Playing_Position"</span>)</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="fu">autoplot</span>(pca)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="section-6" class="level2">
+<h2 class="anchored" data-anchor-id="section-6"></h2>
+</section>
+<section id="ホームアウェイのゴール確率ロジスティック回帰" class="level2">
+<h2 class="anchored" data-anchor-id="ホームアウェイのゴール確率ロジスティック回帰">ホーム・アウェイのゴール確率（ロジスティック回帰</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ゴールフラグを作成</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>Goal_flag <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(data<span class="sc">$</span>Type) <span class="sc">|</span> data<span class="sc">$</span>Type <span class="sc">==</span> <span class="st">""</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># VenueがHまたはAのデータのみ抽出</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>data_ha <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, Venue <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"H"</span>, <span class="st">"A"</span>))</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 必要なら欠損値除去</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>data_ha <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(data_ha)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Venueを0/1に変換</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>data_ha<span class="sc">$</span>Venue_num <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(data_ha<span class="sc">$</span>Venue <span class="sc">==</span> <span class="st">"H"</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_ha, <span class="fu">aes</span>(<span class="at">x =</span> Venue_num, <span class="at">y =</span> Goal_flag)) <span class="sc">+</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.1</span>, <span class="at">height =</span> <span class="fl">0.05</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"gray40"</span>) <span class="sc">+</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_smooth</span>(<span class="at">method =</span> <span class="st">"glm"</span>, <span class="at">method.args =</span> <span class="fu">list</span>(<span class="at">family =</span> <span class="st">"binomial"</span>), <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"A（アウェイ）"</span>, <span class="st">"H（ホーム）"</span>)) <span class="sc">+</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Player別ホーム・アウェイのゴール確率（ロジスティック回帰）"</span>,</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Venue"</span>, <span class="at">y =</span> <span class="st">"ゴール（1=成功, 0=失敗）"</span>) <span class="sc">+</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Player) <span class="sc">+</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="section-7" class="level2">
+<h2 class="anchored" data-anchor-id="section-7"></h2>
+</section>
+<section id="年毎のゴール数の時系列分析" class="level2">
+<h2 class="anchored" data-anchor-id="年毎のゴール数の時系列分析">年毎のゴール数の時系列分析</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 年を抽出</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>Year <span class="ot">&lt;-</span> <span class="fu">substr</span>(data<span class="sc">$</span>Date, <span class="dv">1</span>, <span class="dv">4</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ゴールフラグ（TypeがNAまたは空でなければ1）</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>Goal_flag <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(data<span class="sc">$</span>Type) <span class="sc">|</span> data<span class="sc">$</span>Type <span class="sc">==</span> <span class="st">""</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Player別・年別ゴール数を集計</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>goal_by_player_year <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Player, Year) <span class="sc">%&gt;%</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Goals =</span> <span class="fu">sum</span>(Goal_flag), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co"># グラフ描画</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(goal_by_player_year, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.numeric</span>(Year), <span class="at">y =</span> Goals, <span class="at">color =</span> Player, <span class="at">group =</span> Player)) <span class="sc">+</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Player別・年毎のゴール数の時系列分析"</span>,</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"年"</span>,</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"ゴール数"</span>) <span class="sc">+</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+
+
 </section>
 </section>
 
